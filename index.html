@@ -8,7 +8,7 @@
 	<!-- Bootstrap CSS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="./style.css" />
 	<script src="./index.js"></script>
 </head>
@@ -18,90 +18,73 @@
 	<nav class="navbar navbar-dark bg-dark justify-content-center">
 		<h4 class="text-light ">Corona Virus Daily Case Numbers on WhatsApp</h4>
 	</nav>
+
 	<div class="container-fluid">
-		<nav class="fixed-bottom navbar navbar-dark bg-dark justify-content-center">
-			<p class="text-light text-wrap">
-				<b class="text-center">Project of <a href="https://coronathon.in/">coronothon.in </a> | <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml">Data
-                        Source </a>
-            </p>
-        </nav>
-        <br>
-                <div class="container m-4 p-2">
-                </div>
-                <div class="alert alert-danger text-center alert-dismissible fade show" id="error"
-                    style="display: none;" role="alert">
-                    Oops.. Something went Wrong, Please try again !
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-danger text-center alert-dismissible fade show" id="duplicate"
-                    style="display: none;" role="alert">
-                    User has Already Subscribed to this Service !
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-success text-center alert-dismissible fade show" id="success"
-                    style="display: none;" role="alert">
-                    Thank you! Subscription Successful.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <br>
-        <form id="getContact" name="covid19-contact-form">
-                    <div class="form-group card">
-                        <label class="card-header">Your Information </label>
-                        <div class="input-group card-body">
-                            <div class="input-group-prepend py-1">
-                                <span class="input-group-text" id="pinCode">Pin Code</span>
 
-                                <input type="tel" class="form-control" value="110001" pattern="[1-9]{1}[0-9]{5}"
-                                    onfocus="this.value='';" id="pinCode" aria-label="Pin Code"
-                                    aria-describedby="pinCode" required>
-                            </div>
+			<div class="alert alert-danger text-center alert-dismissible fade show d-none" id="error" role="alert">
+				<span>Oops.. Something went Wrong, Please try again !</span>
+<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button> -->
+			</div>
 
-                            <div class="input-group-prepend py-1">
-                                <span class="input-group-text" id="pinCode">PhoneNo</span>
+			<div class="alert alert-danger text-center alert-dismissible fade show d-none" id="duplicate" role="alert">
+				<span>User has Already Subscribed to this Service !</span>
+<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button> -->
+			</div>
 
-                                <input type="tel" id="phone" required class="form-control" value="9999999999"
-                                    pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';" aria-label="Phone-Number"
-                                    aria-describedby="phoneNumber">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-group-prepend py-1 px-2">
-                            <div class="input-group-text">
-                                <input type="checkbox" required id="checkboxForWhatsapp"
-                                    aria-label="Checkbox for subscribing to newsletter on Whatsapp">
-                            </div>
-                            <span class="input-group-text text-wrap" id="phoneNumber">Receive updates on
-                                WhatsApp
-                            </span>
+			<div class="alert alert-success text-center alert-dismissible fade showd-none" id="success" role="alert">
+				<span>Thank you! Subscription Successful.</span>
+<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button> -->
+			</div>
 
-                        </div>
-                        <div class="input-group my-3 px-2">
-                            <div class="input-group">
-                                <button class="btn btn-block btn-primary" id="susbcribe"
-                                    type="submit">Subscribe</button>
-                            </div>
-                        </div>
+			<form id="getContact" name="covid19-contact-form" class="card">
+				<h2 class="card-header dispay-4 text-center">Your Information </h2>
 
-                </form>
-            </div>
-        
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+					<div class="input-group card-body">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Pin Code</span>
+						</div>
+						<input type="tel" class="form-control" value="110001" pattern="[1-9]{1}[0-9]{5}" onfocus="this.value='';" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
+					</div>
+					<div class="input-group card-body">
+						<div class="input-group-prepend ">
+							<span class="input-group-text">PhoneNo</span>
+						</div>
+						<input type="tel" id="phone" required class="form-control" value="9999999999"pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';" aria-label="PhoneNumber" aria-describedby="phoneNumber">
+					</div>
+					
+					<div class="input-group card-body">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								<input type="checkbox" required id="checkboxForWhatsapp" aria-label="Checkbox for subscribing to newsletter on Whatsapp">
+							</div>
+						</div>
+						<label class="form-control" id="phoneNumber">Receive updates on WhatsApp</label>
+						<div class="input-group-append">
+							<button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
+						</div>
+					</div>
+
+				</form>
+</div>
+
+<nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
+	<a class="navbar-brand" href="https://coronathon.in/">Proud Partner of coronothon.in</a>
+</nav>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
 </body>
 
 </html>
