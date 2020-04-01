@@ -54,10 +54,28 @@ $(document).ready(function () {
   
       function success(pos) {
         var crd = pos.coords;
-        console.log('Your current position is:');
+        console.log('Your current position is:',crd);
         console.log(`Latitude : ${crd.latitude}`);
         console.log(`Longitude: ${crd.longitude}`);
         console.log(`More or less ${crd.accuracy} meters.`);
+        getpincode(crd.latitude,crd.longitude)
+        // https://geocode.xyz/13.03132,77.6597321?geoit=json
+      }
+
+      function getpincode(lat,lon){
+        $.ajax({
+          type: "GET",
+          url: "https://geocode.xyz/"+lat+","+lon+"?geoit=json",
+          encode: false,
+          success: function (msg) {
+            console.log("Data Saved: " + JSON.stringify(msg.postal));
+            $('#pinCode').val(msg.postal)
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest.responseText)
+          }
+        });
+
       }
   
       function error(err) {
