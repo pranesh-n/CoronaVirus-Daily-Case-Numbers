@@ -8,91 +8,194 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="./style.css" />
+
+  
+	<link href="/style.css" />
+
+	<!-- Material Icons-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58677654-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-58677654-4');
+	</script>
+
+
+	<style media="screen">
+	.parallax {
+		/* The image used */
+		background-image: url("loren-joseph-11eY-tkB9VU-unsplash-post.jpg");
+
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+  </style>
 </head>
 
 <body>
+	<header class="bg-dark" height="100px">
+		<h4 class="text-light text-center display-4">CoronaVirus Daily Case Numbers on SMS/WhatsApp</h4>
+	</header>
 
-	<nav class="navbar navbar-dark bg-dark justify-content-center">
-		<h4 class="text-light ">CoronaVirus Daily Case Numbers on SMS/WhatsApp</h4>
-	</nav>
-	<div class="container-fluid my-2">
-		<div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="error" role="alert">
-			<span>Oops.. Something went Wrong, Please try again !</span>
-<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button> -->
-		</div>
-
-		<div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="duplicate" role="alert">
-			<span>User has Already Subscribed to this Service !</span>
-<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button> -->
-		</div>
-
-		<div class="alert alert-success text-center alert-dismissible fade show" style="display: none;" id="success" role="alert">
-			<span>Thank you! Subscription Successful.</span>
-<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button> -->
-		</div>
-	</div>
-	<div class="container-fluid my-4">
-
-			<form id="getContact" name="covid19-contact-form" class="card">
-				<h2 class="card-header dispay-4 text-center">Your Information </h2>
-
-					<div class="input-group card-body">
-						<div class="input-group-prepend">
-							<span class="input-group-text">Pin Code</span>
-						</div>
-						<input type="tel" class="form-control" value="110001" pattern="[1-9]{1}[0-9]{5}" onfocus="this.value='';" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
-					</div>
-					<div class="input-group card-body">
-						<div class="input-group-prepend ">
-							<span class="input-group-text">PhoneNo</span>
-						</div>
-						<input type="tel" id="phone" required class="form-control" value="9999999999"pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';" aria-label="PhoneNumber" aria-describedby="phoneNumber">
-					</div>
-					
-					<div class="input-group card-body">
-						<div class="input-group-prepend">
-							<div class="input-group-text">
-								<input type="checkbox" required id="checkboxForWhatsapp" aria-label="Checkbox for subscribing to newsletter on Whatsapp">
-							</div>
-						</div>
-						<label class="form-control" id="phoneNumber">Receive updates on SMS/WhatsApp</label>
-						<div class="input-group-append">
-							<button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
-						</div>
-					</div>
-
-				</form>
+	<div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="error" role="alert">
+		<span>Oops.. Something went Wrong, Please try again !</span>
+		<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button> -->
 </div>
 
-<nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
-	<a class="navbar-brand" href="https://coronathon.in/">Proud Partner of Coronathon.in</a>
-</nav>
+<div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="duplicate" role="alert">
+	<span>User has Already Subscribed to this Service !</span>
+	<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<span aria-hidden="true">&times;</span>
+</button> -->
+</div>
 
+<div class="alert alert-success text-center alert-dismissible fade show" style="display: none;" id="success" role="alert">
+	<span>Thank you! Subscription Successful.</span>
+	<!-- 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<span aria-hidden="true">&times;</span>
+</button> -->
+</div>
+
+<div class="container mx-auto">
+<div class="row justify-content-around">
+	<main class="col-md-5 my-4 card">
+		<h2 class="card-header display-4 text-center">Your Information </h2>
+		<form id="getContact" name="covid19-contact-form" class="card-body">
+			<div class="input-group py-2">
+				<div class="input-group-prepend">
+					<span class="input-group-text material-icons">edit_location</span>
+				</div>
+				<input type="tel" class="form-control" value="110001" pattern="[1-9]{1}[0-9]{5}" onfocus="this.value='';" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
+			</div>
+			<div class="input-group py-2 ">
+				<div class="input-group-prepend ">
+					<span class="input-group-text material-icons">smartphone</span>
+				</div>
+				<input type="tel" id="phone" required class="form-control" value="9999999999"pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';" aria-label="PhoneNumber" aria-describedby="phoneNumber">
+			</div>
+
+			<div class="input-group py-2 ">
+				<div class="input-group-prepend">
+					<div class="input-group-text">
+						<input type="checkbox" required id="checkboxForWhatsapp" aria-label="Checkbox for subscribing to newsletter on Whatsapp">
+					</div>
+				</div>
+				<label class="form-control" id="phoneNumber">Receive updates on SMS</label>
+				<div class="input-group-append">
+					<button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
+				</div>
+			</div>
+		</form>
+	</main>
+	<aside class="col-md-5 my-4 card">
+		<h2 class="card-header display-4 text-center">About</h2>
+		<p class="card-text muted">
+			We are a group of volunteers with a mission to keep you informed with verified case numbers of Coronavirus in your location, so you can take informed decisions to protect yourself and your community. We came together to work on this project inspired by many others from <a href="coronothon.in">coronothon.in</a>.
+		</p>
+		</div>
+	</aside>
+</div>
+
+<div class="container mx-auto py-2">
+
+	<h2 id="our-team" class="text-center bg-light text-dark display-4">Our Team</h2>
+	<hr>
+	<div class="row justify-content-around">
+		<div class="card col-md-3 ">
+			<img class="card-img-top" src="\sandeep-post.jpg" alt="Sandeep Kumar">
+			<div class="">
+				<h5 class="card-title">Sandeep Kumar</h5>
+				<p class="card-subtitle">Data Scientist</p>
+			</div>
+			<div class="card-footer row d-flex justify-content-around">
+				<a class="col-4" href="https://www.linkedin.com/in/sandeepgangarapu/">
+					<img src="\LI-In-Bug.png" height="30px">
+				</a>
+				<a class="col-4" href="https://twitter.com/sandyrt">
+					<img src="Twitter_Logo_Blue.svg" height="30px">
+				</a>
+			</div>
+		</div>
+		<div class="card col-md-3 ">
+			<img class="card-img-top" src="\aaron-post.jpg" alt="Card image cap">
+			<div class="">
+				<h5 class="card-title">Aaron de Miranda Colaço</h5>
+				<p class="card-subtitle">Blockchain Architect</p>
+			</div>
+			<div class="card-footer row d-flex justify-content-around">
+				<a class="col-4" href="https://www.linkedin.com/in/aarondmc/">
+					<img src="\LI-In-Bug.png" height="30px">
+				</a>
+				<a class="col-4" href="https://twitter.com/aaroncolaco">
+					<img src="Twitter_Logo_Blue.svg" height="30px">
+				</a>
+			</div>
+		</div>
+		<div class="card col-md-3 ">
+			<img class="card-img-top" src="\vaibhav-post.jpg" alt="Vaibhav Kaushik">
+			<div class="">
+				<h5 class="card-title">Vaibhav Kaushik</h5>
+				<p class="card-subtitle">Software Engineer</p>
+			</div>
+			<div class="card-footer row d-flex justify-content-around">
+				<a class="col-4" href="https://www.linkedin.com/in/vaibhav2609/">
+					<img src="\LI-In-Bug.png" height="30px">
+				</a>
+				<a class="col-4" href="#">
+					<img src="Twitter_Logo_Blue.svg" height="30px">
+				</a>
+			</div>
+		</div>
+		<div class="card col-md-3 ">
+			<img class="card-img-top" src="\Pranesh_profile_pic_2-post.jpg" alt="Pranesh Nagarajan">
+			<div class="">
+				<h5 class="card-title">Pranesh Nagarajan</h5>
+				<p class="card-subtitle">Go-To-Market |<wbr> User Experience</p>
+			</div>
+			<div class="card-footer row d-flex justify-content-around">
+				<a class="col-4" href="https://www.linkedin.com/in/praneshnagarajan/">
+					<img src="\LI-In-Bug.png" height="30px">
+				</a>
+				<a class="col-4" href="https://twitter.com/praneshnr">
+					<img src="Twitter_Logo_Blue.svg" height="30px">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer>
+	<nav class="navbar navbar-dark bg-dark justify-content-around">
+		<a class="navbar-brand" href="https://coronathon.in/">Proud Partner of Coronathon.in</a>
+		<a class="navbar-brand material-icons" href="mailto:support@coronadailyupdates.org">email</a>
+	</nav>
+</footer>
 <!-- Optional JavaScript -->
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 crossorigin="anonymous"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162266112-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-162266112-1');
-</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 crossorigin="anonymous"></script>
-<script src="./index.js"></script>
+
+<script src="/index.js"></script>
+
 </body>
 
 </html>
