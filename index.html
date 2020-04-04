@@ -6,18 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CoronaVirus Daily Case Numbers</title>
 	<!-- Bootstrap CSS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="./style.css" />
-	<script src="./index.js"></script>
 </head>
 
 <body>
 
-	<nav class="navbar navbar-dark bg-dark justify-content-center">
-		<h4 class="text-light ">CoronaVirus Daily Case Numbers on SMS/WhatsApp</h4>
-	</nav>
+	<nav class="navbar navbar-dark bg-dark">
+        <h4 class="text-light text-center">CoronaVirus Daily Case Numbers on SMS/WhatsApp</h4>
+        <form class="form-inline my-2 my-lg-0">
+            <span class="nav-item">
+                <a class="text-light text-center" href="./thank-you.html">About Us</a>
+            </span>  
+          </form>
+    </nav>
 	<div class="container-fluid my-2">
 		<div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="error" role="alert">
 			<span>Oops.. Something went Wrong, Please try again !</span>
@@ -74,11 +77,14 @@
 </div>
 
 <nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
-	<a class="navbar-brand" href="https://coronathon.in/">Proud Partner of Coronathon.in</a>
+    <a class="navbar-brand" href="https://coronathon.in/">Proud Partner of Coronathon.in</a>
 </nav>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./scripts/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 crossorigin="anonymous"></script>
