@@ -13,13 +13,8 @@
 
 <body>
 
-	<nav class="navbar navbar-dark bg-dark">
+	<nav class="navbar navbar-dark bg-dark justify-content-center">
         <h4 class="text-light text-center">CoronaVirus Daily Case Numbers on SMS/WhatsApp</h4>
-        <form class="form-inline my-2 my-lg-0">
-            <span class="nav-item">
-                <a class="text-light text-center" href="./thank-you.html">About Us</a>
-            </span>  
-          </form>
     </nav>
 	<div class="container-fluid my-2">
 		<div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="error" role="alert">
@@ -56,9 +51,12 @@
 					</div>
 					<div class="input-group card-body">
 						<div class="input-group-prepend ">
-							<span class="input-group-text">PhoneNo</span>
+							<span class="input-group-text">Phone</span>
+                        </div>
+                        <div class="input-group-prepend ">
+							<span class="input-group-text">+91</span>
 						</div>
-						<input type="tel" id="phone" required class="form-control" value="9999999999"pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';" aria-label="PhoneNumber" aria-describedby="phoneNumber">
+						<input type="tel" id="phone" required class="form-control" value="Enter Mobile Number"pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';" aria-label="PhoneNumber" aria-describedby="phoneNumber">
 					</div>
 					
 					<div class="input-group card-body">
@@ -71,7 +69,11 @@
 						<div class="input-group-append">
 							<button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
 						</div>
-					</div>
+                    </div>
+                    
+                    <div class="input-group card-body">
+                        Want to Know More About Us? <a class="text-center text-dark" style="text-decoration: none;" href="./about-us.html">&nbsp;<span class="font-weight-bold" >Click Here</span></a>
+                    </div>
 
 				</form>
 </div>
