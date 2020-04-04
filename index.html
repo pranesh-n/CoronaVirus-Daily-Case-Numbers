@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoronaVirus Daily Case Numbers</title>
     <meta name="Description" CONTENT="We are a group of volunteers with a mission to keep you informed with verified case numbers of Coronavirus in your location, so you can take informed decisions to protect yourself and your community. We came together to work on this project inspired by many others from coronathon.in">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58677654-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-58677654-4');
+	</script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="./style.css" />
+    <link href="style.css" />
 </head>
 
 <body>
@@ -54,7 +63,7 @@
                         </span>
                     <span class="input-group-text">PinCode</span>
                 </div>
-                <input type="tel" class="form-control" placeholder="110001" pattern="[1-9]{1}[0-9]{5}"
+                <input type="tel" class="form-control" value="110001" pattern="[1-9]{1}[0-9]{5}"
                     onfocus="this.value='';" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
             </div>
             <div class="input-group card-body">
@@ -67,7 +76,7 @@
                     <span class="input-group-text">+91</span>
                 </div>
                 <input type="tel" id="phone" required class="form-control"
-                    placeholder="Enter Mobile Number" pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';"
+                    value="Enter Mobile Number" pattern="[1-9]{1}[0-9]{9}" onfocus="this.value='';"
                     aria-label="PhoneNumber" aria-describedby="phoneNumber">
             </div>
 
