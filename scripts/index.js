@@ -2,7 +2,7 @@
 $(document).ready(function () {
   //alert('JS working')
   // process the form
-  getloc()
+  //getloc()
 
   $('#getContact').submit(function (event) {
     // get the form data
