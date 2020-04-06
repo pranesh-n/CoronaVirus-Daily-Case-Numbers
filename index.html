@@ -6,21 +6,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coronavirus Daily Case Numbers</title>
-    <meta name="description"
-    content="We are a group of volunteers with a mission to keep you informed with verified case numbers of Coronavirus in your location, so you can take informed decisions to protect yourself and your community. We came together to work on this project inspired by many others from coronathon.in">
-  
-    <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="style.css" />
+
+    <!-- Meta Tags -->
+      <meta name="title" content="Coronavirus Daily Case Numbers">
+      <meta name="description" content="Enter your phone number and pincode to receive Free Daily SMS of Coronovirus case numbers in YOUR District, State and India">
+      <meta name="keywords" content="covid-19, coronavirus, india">
+      <meta name="robots" content="index, follow">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="language" content="English">
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58677654-4"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-58677654-4');
+      </script>
+
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
+    <header class="navbar navbar-dark bg-dark justify-content-center">
         <h4 class="text-light text-center">Coronavirus Daily Case Numbers on SMS/WhatsApp</h4>
-    </nav>
-    <div class="container-fluid my-2">
+    </header>
+
+    <aside class="container-fluid my-2">
         <div class="alert alert-danger text-center alert-dismissible fade show" style="display: none;" id="error"
             role="alert">
             <span>Oops.. Something went wrong, please try again!</span>
@@ -44,8 +63,9 @@
 				<span aria-hidden="true">&times;</span>
 			</button> -->
         </div>
-    </div>
-    <div class="container-fluid my-4">
+    </aside>
+
+    <main class="container-fluid my-2 w-md-50">
 
         <form id="getContact" name="covid19-contact-form" class="card">
             <h2 class="card-header dispay-4 text-center">Your Information </h2>
@@ -57,8 +77,7 @@
                     </span>
                     <span class="input-group-text">PinCode</span>
                 </div>
-                <input type="tel" class="form-control" placeholder="110001" pattern="[1-9]{1}[0-9]{5}"
-                 id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
+                <input type="tel" class="form-control" placeholder="110001" pattern="[1-9]{1}[0-9]{5}" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
             </div>
             <div class="input-group card-body">
                 <div class="input-group-prepend ">
@@ -69,39 +88,41 @@
                 <div class="input-group-prepend ">
                     <span class="input-group-text">+91</span>
                 </div>
-                <input type="tel" id="phone" required class="form-control" placeholder="Enter phone number"
-                    pattern="[1-9]{1}[0-9]{9}" aria-label="PhoneNumber"
-                    aria-describedby="phoneNumber">
+                <input type="tel" id="phone" required class="form-control" placeholder="Enter phone number" pattern="[1-9]{1}[0-9]{9}" aria-label="PhoneNumber" aria-describedby="phoneNumber">
             </div>
 
             <div class="input-group card-body">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="checkbox" required id="checkboxForWhatsapp"
-                            aria-label="Checkbox for subscribing to newsletter on Whatsapp">
+                        <input type="checkbox" required id="checkboxForWhatsapp" aria-label="Checkbox for subscribing to newsletter on Whatsapp">
                     </div>
                 </div>
-                <label class="form-control" id="phoneNumber">Receive updates on SMS/WhatsApp</label>
-                <div class="input-group-append">
-                    <button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
-                </div>
+                <label class="form-control" id="phoneNumber"><small>Receive updates on SMS/WhatsApp</small></label>
             </div>
 
             <div class="input-group card-body">
-                Want to know more about us? <a class="text-center text-dark" style="text-decoration: none;"
-                    href="./about-us.html">&nbsp;<span class="font-weight-bold">Click here</span></a>
+                <button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
             </div>
 
         </form>
-    </div>
 
-    <nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
+        <div class="card d-none d-md-block">
+          <div class="card-body">
+            <h5 class="card-title">Enter your phone number and pincode to receive Free Daily SMS of Coronovirus case numbers in YOUR District, State and India.</h5>
+            <p class="card-subtitle">We source our data from <a href="https://www.mohfw.gov.in/">Ministry of Health and Family Welfare</a></p>
+          </div>
+
+        </div>
+
+    </main>
+
+    <footer class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
         <a class="navbar-brand" href="https://coronathon.in/">Proud Partner of coronathon.in</a>
-    </nav>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./scripts/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -110,15 +131,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162266112-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-162266112-1');
-    </script>
 
 </body>
 
