@@ -1,4 +1,27 @@
-body {
-  min-height: 80rem;
-  padding-bottom: 5rem;
+@media (min-width: 992px) /* 922px is medium laptop */
+{
+ 
+    body {
+      min-height: 80vh;
+      /* padding-bottom: 5em; */
+      
+      /* background image */
+    
+      background-image: url('./loren-joseph-11eY-tkB9VU-unsplash-post.jpg');
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+    }
+  
+    #main-card{
+      /* margin: 0% 0% 0% 0%; */
+      max-width: 60vw;
+      min-height: 80vh;
+    }
+  
+  
+
+ 
 }
