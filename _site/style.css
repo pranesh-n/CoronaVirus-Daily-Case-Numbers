@@ -1,27 +1,34 @@
+body {
+  min-height: 80vh;
+  padding-bottom: 2rem;
+}
+
 @media (min-width: 992px) /* 922px is medium laptop */
 {
- 
+
     body {
-      min-height: 80vh;
-      /* padding-bottom: 5em; */
-      
+
       /* background image */
-    
+
       background-image: url('./loren-joseph-11eY-tkB9VU-unsplash-post.jpg');
       background-attachment: fixed;
-      background-position: top;
+      background-position: top left;
       background-repeat: no-repeat;
       background-size: cover;
-  
+
     }
-  
+
     #main-card{
       /* margin: 0% 0% 0% 0%; */
-      max-width: 60vw;
-      min-height: 80vh;
+      max-width: 35vw;
+      min-height: 75vh;
     }
-  
-  
 
- 
+    #getContact {
+      min-height: 75vh;
+    }
+
+
+
+
 }
