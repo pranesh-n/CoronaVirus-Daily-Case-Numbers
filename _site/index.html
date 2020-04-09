@@ -76,16 +76,17 @@
 
         <form id="getContact" name="covid19-contact-form" class="card">
             <h2 class="card-header text-center">Your Information</h2>
-            <div class="input-group card-body">
+            <small id="working" class="form-text text-muted text-center">Subscribe to receive free daily updates for your district. Information sourced from <a href="https://www.mohfw.gov.in/">Ministry of Health and Family Welfare</a></small>
+            <div class="input-group input-group-sm card-body">
                 <div class="input-group-prepend">
                     <span class="material-icons input-group-text">
                         location_on
                     </span>
                     <span class="input-group-text">PinCode</span>
                 </div>
-                <input type="tel" class="form-control" placeholder="110001" pattern="[1-9]{1}[0-9]{5}" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
+                <input type="tel" class="form-control " placeholder="110001" pattern="[1-9]{1}[0-9]{5}" id="pinCode" aria-label="PinCode" aria-describedby="pinCode" required>
             </div>
-            <div class="input-group card-body">
+            <div class="input-group input-group-sm card-body pb-0">
                 <div class="input-group-prepend ">
                     <span class="material-icons input-group-text">
                         call
@@ -95,23 +96,24 @@
                     <span class="input-group-text">+91</span>
                 </div>
                 <input type="tel" id="phone" required class="form-control" placeholder="Phone Number" pattern="[1-9]{1}[0-9]{9}" aria-label="PhoneNumber" aria-describedby="phoneNumber">
-            </div>
+              </div>
+            <p id="phoneHelp" class="form-text card-body card-text text-muted py-0 my-0"><small>We will not share your private data<small></p>
 
-            <div class="input-group card-body">
+            <div class="input-group input-group-sm card-body">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
                         <input type="checkbox" required id="checkboxForWhatsapp" aria-label="Checkbox for subscribing to newsletter on Whatsapp">
                     </div>
                 </div>
-                <label class="form-control" id="phoneNumber"><small>Receive updates on SMS/WhatsApp</small></label>
+                <label class="form-control " id="phoneNumber"><small>Receive updates on SMS/WhatsApp</small></label>
+
             </div>
 
-            <div class="input-group card-body">
+            <div class="input-group input-group-sm card-body">
                 <button class="btn btn-block btn-primary" id="susbcribe" type="submit">Subscribe</button>
             </div>
             <div class="card-footer">
-                <p class="text-muted text-justify">Enter your phone number and pincode to receive Free Daily SMS of Coronovirus case numbers in YOUR District, State and India. We source our data from <a href="https://www.mohfw.gov.in/">Ministry of Health and Family Welfare</a></p>
-                <p class="text-center text-muted"><a href="about-us.html" class="navbar-brand">Team</a><p>
+              <p class="text-center text-muted"><a href="about-us.html" class="navbar-brand">Team</a><p>
             </div>
 
         </form>     
@@ -122,7 +124,7 @@
     </main>
 
     <footer class="navbar navbar-dark bg-dark justify-content-around fixed-bottom">
-        <a class="navbar-brand" href="https://coronathon.in/">Proud Partner of coronathon.in</a>
+        <a class="navbar-brand" href="https://coronathon.in/">Proud Partner of <u>coronathon.in</u></a>
     </footer>
 
     <!-- Optional JavaScript -->
