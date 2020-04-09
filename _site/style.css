@@ -1,4 +1,12 @@
 body {
-  min-height: 80rem;
+  min-height: 80vh;
   padding-bottom: 5rem;
+  
+  /* background image */
+
+  background-image: url('./loren-joseph-11eY-tkB9VU-unsplash-post.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
